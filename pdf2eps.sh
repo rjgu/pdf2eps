@@ -16,7 +16,7 @@
 
 infile="$1"
 echo "Cropping the pdf page in $infile..."
-pdfcrop "$infile" "$infile.~tmp"
+pdfcrop --margins 2 "$infile" "$infile.~tmp"
 echo "Cropping finished, temporary file \"$infile.~tmp\" generated.\n"
 
 echo "Converting \"$infile.~tmp\" to \"${infile/%.pdf/}.eps\"..."
